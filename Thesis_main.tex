@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt,oneside,fleqn]{article}
+\usepackage{geometry}
+\geometry{a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,heightrounded,bindingoffset=5mm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+\usepackage{epsf}  % for embedding postscript figures
+\usepackage{epsfig}  % for those that use epsfig instead
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{xspace}
+\usepackage{float}
+\usepackage{esvect}
+\usepackage{morefloats}
+\usepackage{subfloat}
+\usepackage{subfig}
+\usepackage{relsize}
+\usepackage[english]{babel}
+\usepackage[babel]{csquotes}
+%\usepackage[bibstyle=numeric,citestyle=authoryear-ibid,sorting=nyt]{biblatex}
+\usepackage{natbib}
+\usepackage{textcomp}
+\usepackage{stmaryrd}
+\usepackage{booktabs}
+\usepackage{impostazioni-tesi}
+\usepackage{caption}
+\captionsetup{format=hang,labelfont={sf,bf}}
+\usepackage{frontespizio}
+\usepackage{hyperref}
+\usepackage{braket}
+\usepackage[left]{lineno}
+\usepackage{rotating}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{shortcuts}
+\usepackage{siunitx}
+\usepackage{multirow}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
+\usetikzlibrary{trees}
+\usetikzlibrary{shapes.geometric,arrows,chains}
+
+
+
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
+
+\bibliography{Bibliografia}
+
+%flowchart settings
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, text width=3cm, draw=black]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=4cm, minimum height=1cm, text centered, text width=3cm,draw=black,fill=red!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, text width=3.5cm, draw=black,fill=blue!30]
+\tikzstyle{decision} = [diamond,diamond , aspect=2, minimum width=3cm, minimum height=1cm, text centered, text width=3cm,draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+%flowchart settings
+
+\begin{document}
+\linenumbers
+%\frontmatter
+%\input{Initialfinalmaterial/Abstract}
+\pagebreak
+\tableofcontents
+\pagebreak
+\input{Initialfinalmaterial/Introduction}
+\input{Sections/LHC_Atlas}
+\input{Sections/PixelTracking}
+\input{Sections/IBL_project}
+\input{Sections/IBL_constr}
+\input{Sections/IBL_QA}
+\input{Sections/IBL_commissioning}
+%\input{Sections/IBL_DAQ}
+%\input{Sections/Pix_performance}
+\input{Sections/B_tagging}
+%\input{Sections/Systematics}
+\input{Initialfinalmaterial/Concloutlook}
+%\mainmatter
+
+%\backmatter
+\pagebreak
+\listoftables
+\listoffigures
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{\refname}
+%\nocite{*}
+\printbibliography
+\end{document}
+
+% “ ”
